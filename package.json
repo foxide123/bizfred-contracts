@@ -1,12 +1,26 @@
 {
-    "name": "@bizfred/contracts",
-    "version": "0.1.1",
-    "publishConfig": {
-        "access": "public"
-    },
-    "main": "./src/index.ts",
-    "types": "./src/index.ts",
-    "dependencies": {
-        "zod": "^4.1.12"
+  "name": "@bizfred/contracts",
+  "version": "0.1.2",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
     }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "zod": "^4.1.12"
+  }
 }
