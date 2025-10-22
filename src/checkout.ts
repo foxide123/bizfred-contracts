@@ -8,7 +8,7 @@ const addressValidation = z.string().min(1);
 const postNumberValidation = z.string().min(1);
 const cityValidation = z.string().min(1);
 const emailValidation = z.string().email();
-const phoneValidation = z.number();
+const phoneValidation = z.string().min(5).max(20);
 
 
 export const CheckoutSchema = z.object({
